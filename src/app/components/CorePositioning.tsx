@@ -7,7 +7,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 const principles = [
   "Strategi harus bisa dijalankan",
   "Training harus mengubah perilaku",
-  "Growth harus terasa, bukan sekadar terlihat bagus di slide"
+  "Growth harus terasa, bukan sekadar terlihat bagus di slide",
 ];
 
 export function CorePositioning() {
@@ -27,7 +27,7 @@ export function CorePositioning() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-white">
+        <div className="max-w-5xl mx-auto text-white overflow-x-hidden">
           {/* Main Statement */}
           <motion.div
             className="text-center mb-12 md:mb-16"
@@ -36,7 +36,9 @@ export function CorePositioning() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              GROWTH INDONESIA CONSULTING hadir sebagai mitra strategis untuk membantu organisasi bertumbuh secara sehat, efektif, dan berkelanjutan.
+              GROWTH INDONESIA CONSULTING hadir sebagai mitra strategis untuk
+              membantu organisasi bertumbuh secara sehat, efektif, dan
+              berkelanjutan.
             </h2>
           </motion.div>
 
@@ -57,11 +59,16 @@ export function CorePositioning() {
                   key={index}
                   className="p-6 md:p-8 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                  }
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 >
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 size={24} className="text-green-200 flex-shrink-0 mt-1" />
+                    <CheckCircle2
+                      size={24}
+                      className="text-green-200 flex-shrink-0 mt-1"
+                    />
                     <p className="text-lg text-white">{principle}</p>
                   </div>
                 </motion.div>
@@ -78,7 +85,8 @@ export function CorePositioning() {
           >
             <div className="inline-block px-8 py-6 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">
               <p className="text-xl md:text-2xl font-semibold italic">
-                Karena perubahan nyata hanya terjadi ketika strategi bertemu dengan eksekusi.
+                Karena perubahan nyata hanya terjadi ketika strategi bertemu
+                dengan eksekusi.
               </p>
             </div>
           </motion.div>

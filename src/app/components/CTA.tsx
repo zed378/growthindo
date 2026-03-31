@@ -9,9 +9,12 @@ export function CTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-[#70A118] to-[#548C1A] text-white">
+    <section
+      ref={ref}
+      className="py-16 md:py-24 bg-gradient-to-br from-[#70A118] to-[#548C1A] text-white"
+    >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center overflow-x-hidden">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -32,8 +35,8 @@ export function CTA() {
             transition={{ delay: 0.3 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="secondary"
                 className="group text-lg px-8 py-6 h-auto bg-white text-[#70A118] hover:bg-green-50 w-full sm:w-auto"
               >
@@ -50,9 +53,9 @@ export function CTA() {
             transition={{ delay: 0.5 }}
           >
             <MessageCircle size={20} />
-            <a 
-              href="https://wa.me/6289676306869" 
-              target="_blank" 
+            <a
+              href="https://wa.me/6289676306869"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-lg hover:text-white transition-colors underline"
             >

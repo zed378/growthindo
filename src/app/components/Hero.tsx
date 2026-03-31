@@ -17,52 +17,63 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center overflow-x-hidden">
           {/* Headline */}
-          <motion.h1 
+          <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6 md:mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Bangun Tim yang Kuat. Perkuat Sistem. Dorong Pertumbuhan Bisnis Berkelanjutan.
+            Bangun Tim yang Kuat. Perkuat Sistem. Dorong Pertumbuhan Bisnis
+            Berkelanjutan.
           </motion.h1>
-          
+
           {/* Subheadline */}
-          <motion.p 
+          <motion.p
             className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="font-semibold">GROWTH INDONESIA CONSULTING</span> membantu organisasi mengembangkan SDM dan memperkuat fungsi bisnis melalui pendekatan strategis, terukur, dan berdampak nyata.
+            <span className="font-semibold">GROWTH INDONESIA CONSULTING</span>{" "}
+            membantu organisasi mengembangkan SDM dan memperkuat fungsi bisnis
+            melalui pendekatan strategis, terukur, dan berdampak nyata.
           </motion.p>
 
           {/* Support line */}
-          <motion.p 
+          <motion.p
             className="text-base sm:text-lg md:text-xl text-gray-600 italic mb-10 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Karena bisnis yang bertumbuh bukan hanya tentang ide — tapi tentang sistem, manusia, dan eksekusi yang tepat.
+            Karena bisnis yang bertumbuh bukan hanya tentang ide — tapi tentang
+            sistem, manusia, dan eksekusi yang tepat.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="group bg-[#70A118] hover:bg-[#548C1A] text-lg px-8 py-6 h-auto w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="group bg-[#70A118] hover:bg-[#548C1A] text-lg px-8 py-6 h-auto w-full sm:w-auto"
+              >
                 Jadwalkan Konsultasi Gratis
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" variant="outline" className="group border-[#70A118] text-[#70A118] hover:bg-[#70A118] hover:text-white text-lg px-8 py-6 h-auto w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group border-[#70A118] text-[#70A118] hover:bg-[#70A118] hover:text-white text-lg px-8 py-6 h-auto w-full sm:w-auto"
+              >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Diskusikan Kebutuhan Anda
               </Button>

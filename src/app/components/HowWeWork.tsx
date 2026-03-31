@@ -7,28 +7,29 @@ const steps = [
   {
     number: "01",
     title: "Assessment",
-    description: "Memahami kondisi, tantangan, dan tujuan bisnis secara menyeluruh"
+    description:
+      "Memahami kondisi, tantangan, dan tujuan bisnis secara menyeluruh",
   },
   {
     number: "02",
     title: "Design Solution",
-    description: "Merancang solusi yang sesuai dengan konteks organisasi"
+    description: "Merancang solusi yang sesuai dengan konteks organisasi",
   },
   {
     number: "03",
     title: "Implementation",
-    description: "Mendampingi proses implementasi secara praktis"
+    description: "Mendampingi proses implementasi secara praktis",
   },
   {
     number: "04",
     title: "Evaluation",
-    description: "Mengukur efektivitas dan dampak program"
+    description: "Mengukur efektivitas dan dampak program",
   },
   {
     number: "05",
     title: "Continuous Improvement",
-    description: "Menyempurnakan solusi untuk pertumbuhan berkelanjutan"
-  }
+    description: "Menyempurnakan solusi untuk pertumbuhan berkelanjutan",
+  },
 ];
 
 export function HowWeWork() {
@@ -38,7 +39,7 @@ export function HowWeWork() {
   return (
     <section id="how-we-work" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto overflow-x-hidden">
           {/* Section Header */}
           <motion.div
             className="text-center mb-12 md:mb-16"
@@ -59,7 +60,9 @@ export function HowWeWork() {
                   key={index}
                   className="relative flex items-start gap-4 p-6 md:p-8 bg-gradient-to-r from-green-50 to-white rounded-xl border-2 border-green-100 hover:border-[#70A118] transition-all hover:shadow-lg"
                   initial={{ opacity: 0, x: -30 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  animate={
+                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
+                  }
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div className="flex-shrink-0">
@@ -81,7 +84,7 @@ export function HowWeWork() {
 
             {/* Right - Image */}
             <motion.div
-              className="relative order-first lg:order-last"
+              className="relative order-first lg:order-last overflow-x-hidden"
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.8 }}
@@ -107,7 +110,8 @@ export function HowWeWork() {
           >
             <div className="inline-block px-8 py-6 bg-gradient-to-r from-[#70A118] to-[#548C1A] text-white rounded-xl shadow-lg">
               <p className="text-xl md:text-2xl font-semibold">
-                Kami tidak hanya merancang solusi — kami memastikan solusi tersebut bekerja.
+                Kami tidak hanya merancang solusi — kami memastikan solusi
+                tersebut bekerja.
               </p>
             </div>
           </motion.div>

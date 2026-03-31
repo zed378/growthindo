@@ -9,7 +9,7 @@ const differentiators = [
   "Solusi yang praktis, aplikatif, dan relevan",
   "Fokus pada hasil dan dampak nyata",
   "Fleksibel untuk berbagai skala organisasi",
-  "Didukung oleh pengalaman di bidang HR & organizational development"
+  "Didukung oleh pengalaman di bidang HR & organizational development",
 ];
 
 export function Differentiation() {
@@ -19,7 +19,7 @@ export function Differentiation() {
   return (
     <section ref={ref} className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto overflow-x-hidden">
           <motion.div
             className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -37,11 +37,16 @@ export function Differentiation() {
                 key={index}
                 className="flex items-start gap-4 p-6 md:p-8 bg-white rounded-xl border-2 border-green-100 hover:border-[#70A118] transition-all hover:shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <CheckCircle2 size={24} className="text-[#70A118] flex-shrink-0 mt-1" />
+                <CheckCircle2
+                  size={24}
+                  className="text-[#70A118] flex-shrink-0 mt-1"
+                />
                 <p className="text-base md:text-lg text-gray-800">{item}</p>
               </motion.div>
             ))}

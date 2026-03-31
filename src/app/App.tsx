@@ -16,7 +16,7 @@ import { ScrollProgress } from "./components/ScrollProgress";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white scroll-smooth">
+    <div className="min-h-screen bg-white">
       <Header />
       <ScrollProgress />
       <main>

@@ -22,9 +22,9 @@ export function CTANew() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center text-white overflow-x-hidden">
           {/* Main Message */}
-          <motion.div 
+          <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -39,19 +39,16 @@ export function CTANew() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.3 }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
-                variant="secondary" 
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                variant="secondary"
                 className="group text-lg px-8 py-6 h-auto bg-white text-[#70A118] hover:bg-green-50"
               >
                 <Calendar className="mr-2 h-5 w-5" />
@@ -61,7 +58,7 @@ export function CTANew() {
             </motion.div>
           </motion.div>
 
-          <motion.p 
+          <motion.p
             className="text-lg text-green-100"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}

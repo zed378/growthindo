@@ -3,13 +3,15 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 
 const about = {
-  mainText: "GROWTH INDONESIA CONSULTING adalah perusahaan konsultan yang berfokus pada pengembangan SDM (Human Resources) dan penguatan fungsi organisasi (Functional Development) secara strategis, terukur, dan berkelanjutan.",
+  mainText:
+    "GROWTH INDONESIA CONSULTING adalah perusahaan konsultan yang berfokus pada pengembangan SDM (Human Resources) dan penguatan fungsi organisasi (Functional Development) secara strategis, terukur, dan berkelanjutan.",
   helps: [
     "Sistem HR yang kuat",
     "Talenta yang kompeten",
-    "Budaya kerja yang adaptif"
+    "Budaya kerja yang adaptif",
   ],
-  closing: "Dengan pendekatan berbasis kebutuhan bisnis, data, dan praktik terbaik, kami memastikan setiap solusi memberikan dampak nyata terhadap kinerja organisasi."
+  closing:
+    "Dengan pendekatan berbasis kebutuhan bisnis, data, dan praktik terbaik, kami memastikan setiap solusi memberikan dampak nyata terhadap kinerja organisasi.",
 };
 
 export function About() {
@@ -19,7 +21,7 @@ export function About() {
   return (
     <section ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto overflow-x-hidden">
           <motion.div
             className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
@@ -49,7 +51,11 @@ export function About() {
                   key={index}
                   className="flex items-center gap-3 p-4 bg-white rounded-lg border-2 border-[#70A118]"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, scale: 1 }
+                      : { opacity: 0, scale: 0.9 }
+                  }
                   transition={{ delay: 0.4 + index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
                 >

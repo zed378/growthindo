@@ -7,7 +7,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 const beliefs = [
   "Strategi harus bisa dijalankan",
   "Training harus mengubah perilaku",
-  "Growth harus terasa, bukan sekadar terlihat bagus di slide"
+  "Growth harus terasa, bukan sekadar terlihat bagus di slide",
 ];
 
 export function PositioningSection() {
@@ -27,9 +27,9 @@ export function PositioningSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-white">
+        <div className="max-w-4xl mx-auto text-white overflow-x-hidden">
           {/* Header */}
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -45,7 +45,7 @@ export function PositioningSection() {
 
           {/* Beliefs */}
           <div className="space-y-6 mb-8">
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl font-medium text-center mb-8"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -54,11 +54,13 @@ export function PositioningSection() {
               Kami percaya:
             </motion.p>
             {beliefs.map((belief, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="flex items-start gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                 initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
+                }
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
               >
                 <div className="flex-shrink-0 mt-1">
@@ -70,14 +72,15 @@ export function PositioningSection() {
           </div>
 
           {/* Footer note */}
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.8 }}
           >
             <p className="text-lg text-green-100 italic">
-              Pendekatan ini juga sejalan dengan tren consulting modern yang menggabungkan strategi dan eksekusi, bukan hanya teori
+              Pendekatan ini juga sejalan dengan tren consulting modern yang
+              menggabungkan strategi dan eksekusi, bukan hanya teori
             </p>
           </motion.div>
         </div>

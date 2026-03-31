@@ -7,7 +7,7 @@ const problems = [
   "Sudah jalan, tapi tidak berkembang",
   "Tim bekerja, tapi tidak terarah",
   "Sudah coba berbagai cara, tapi tidak konsisten",
-  "Tidak punya strategi yang jelas"
+  "Tidak punya strategi yang jelas",
 ];
 
 export function ProblemSection() {
@@ -17,28 +17,33 @@ export function ProblemSection() {
   return (
     <section ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto overflow-x-hidden">
           {/* Header */}
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
-              Banyak bisnis tahu mereka ingin bertumbuh.<br />
-              <span className="font-semibold">Tapi sering terjebak di sini:</span>
+              Banyak bisnis tahu mereka ingin bertumbuh.
+              <br />
+              <span className="font-semibold">
+                Tapi sering terjebak di sini:
+              </span>
             </p>
           </motion.div>
 
           {/* Problems List */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {problems.map((problem, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="flex items-start gap-4 p-6 bg-gray-50 rounded-lg border-l-4 border-red-400"
                 initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex-shrink-0 mt-1">
@@ -52,15 +57,25 @@ export function ProblemSection() {
           </div>
 
           {/* Solution Statement */}
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <div className="inline-block px-8 py-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border-2 border-[#70A118]">
               <p className="text-xl md:text-2xl text-gray-800 font-medium">
-                Kami membantu mengubah kondisi tersebut menjadi <span className="text-[#70A118] font-semibold">arah yang jelas</span> dan <span className="text-[#70A118] font-semibold">langkah yang bisa dijalankan</span>.
+                Kami membantu mengubah kondisi tersebut menjadi{" "}
+                <span className="text-[#70A118] font-semibold">
+                  arah yang jelas
+                </span>{" "}
+                dan{" "}
+                <span className="text-[#70A118] font-semibold">
+                  langkah yang bisa dijalankan
+                </span>
+                .
               </p>
             </div>
           </motion.div>

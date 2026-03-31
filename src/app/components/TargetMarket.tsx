@@ -6,20 +6,20 @@ import { useRef } from "react";
 const targets = [
   {
     icon: TrendingUp,
-    title: "UMKM & Startup"
+    title: "UMKM & Startup",
   },
   {
     icon: Building2,
-    title: "Perusahaan berkembang & korporasi"
+    title: "Perusahaan berkembang & korporasi",
   },
   {
     icon: Users,
-    title: "BUMN & anak perusahaan"
+    title: "BUMN & anak perusahaan",
   },
   {
     icon: GraduationCap,
-    title: "Institusi pendidikan & organisasi publik"
-  }
+    title: "Institusi pendidikan & organisasi publik",
+  },
 ];
 
 export function TargetMarket() {
@@ -27,9 +27,12 @@ export function TargetMarket() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+    <section
+      ref={ref}
+      className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50"
+    >
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto overflow-x-hidden">
           <motion.div
             className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -49,7 +52,9 @@ export function TargetMarket() {
                   key={index}
                   className="flex items-center gap-4 p-6 md:p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-all border-2 border-transparent hover:border-[#70A118]"
                   initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                  }
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -74,7 +79,8 @@ export function TargetMarket() {
           >
             <div className="inline-block px-8 py-6 bg-gradient-to-r from-[#70A118] to-[#548C1A] text-white rounded-xl shadow-lg">
               <p className="text-lg md:text-xl font-semibold">
-                Terutama bagi mereka yang ingin membangun sistem yang kuat untuk pertumbuhan jangka panjang.
+                Terutama bagi mereka yang ingin membangun sistem yang kuat untuk
+                pertumbuhan jangka panjang.
               </p>
             </div>
           </motion.div>

@@ -7,7 +7,7 @@ const painPoints = [
   "Bisnis sudah berjalan, tapi tidak berkembang",
   "Tim bekerja, tapi tidak memiliki arah yang jelas",
   "Sudah mencoba banyak cara, tapi tidak konsisten",
-  "Strategi ada, tapi sulit dieksekusi"
+  "Strategi ada, tapi sulit dieksekusi",
 ];
 
 export function Problem() {
@@ -17,7 +17,7 @@ export function Problem() {
   return (
     <section ref={ref} className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto overflow-x-hidden">
           {/* Title */}
           <motion.div
             className="text-center mb-12 md:mb-16"
@@ -26,7 +26,8 @@ export function Problem() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto">
-              Banyak bisnis tidak gagal karena kurang ide — tapi karena tidak punya sistem yang tepat.
+              Banyak bisnis tidak gagal karena kurang ide — tapi karena tidak
+              punya sistem yang tepat.
             </h2>
           </motion.div>
 
@@ -37,7 +38,9 @@ export function Problem() {
                 key={index}
                 className="flex items-start gap-4 p-6 md:p-8 bg-white rounded-xl border-l-4 border-red-500 shadow-sm hover:shadow-md transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex-shrink-0 mt-1">
@@ -59,7 +62,8 @@ export function Problem() {
           >
             <div className="inline-block px-8 py-6 bg-gradient-to-r from-[#70A118] to-[#548C1A] text-white rounded-xl shadow-lg">
               <p className="text-xl md:text-2xl font-semibold">
-                Tanpa sistem dan struktur yang kuat, pertumbuhan akan selalu terbatas.
+                Tanpa sistem dan struktur yang kuat, pertumbuhan akan selalu
+                terbatas.
               </p>
             </div>
           </motion.div>

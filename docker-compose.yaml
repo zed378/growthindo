@@ -5,6 +5,7 @@ services:
     image: zed378/growth-lp:latest
     container_name: growth-indo
     restart: always
+    pull_policy: always
     ports:
       - "8888:80"
     networks:
