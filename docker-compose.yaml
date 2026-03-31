@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: zed378/growth-lp:latest
+    container_name: growth-indo
+    restart: always
+    ports:
+      - "8888:80"
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
