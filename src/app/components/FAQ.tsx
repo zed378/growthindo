@@ -68,26 +68,27 @@ export function FAQ() {
           >
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <AccordionItem
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                  }
-                  transition={{ delay: 0.3 + index * 0.1 }}
+                  value={`item-${index}`}
+                  className="bg-gray-50 rounded-lg border-2 border-gray-100 px-6 hover:border-[#70A118] transition-colors last:border-b-2 cursor-pointer"
                 >
-                  <AccordionItem
-                    value={`item-${index}`}
-                    className="bg-gray-50 rounded-lg border-2 border-gray-100 px-6 hover:border-[#70A118] transition-colors"
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={
+                      isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                    }
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="cursor-pointer"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-[#70A118] py-6">
+                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-[#70A118] py-6 cursor-pointer">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-700 leading-relaxed pb-6">
                       {faq.answer}
                     </AccordionContent>
-                  </AccordionItem>
-                </motion.div>
+                  </motion.div>
+                </AccordionItem>
               ))}
             </Accordion>
           </motion.div>

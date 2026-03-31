@@ -13,6 +13,7 @@ import { TargetMarket } from "./components/TargetMarket";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { FAQ } from "./components/FAQ";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Differentiation />
         <Values />
         <TargetMarket />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

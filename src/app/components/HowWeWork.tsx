@@ -39,7 +39,7 @@ export function HowWeWork() {
   return (
     <section id="how-we-work" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto overflow-x-hidden">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div
             className="text-center mb-12 md:mb-16"
@@ -52,7 +52,7 @@ export function HowWeWork() {
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left - Steps */}
             <div className="space-y-6">
               {steps.map((step, index) => (
@@ -84,7 +84,7 @@ export function HowWeWork() {
 
             {/* Right - Image */}
             <motion.div
-              className="relative order-first lg:order-last overflow-x-hidden"
+              className="relative order-first lg:order-last lg:sticky lg:top-24"
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.8 }}
