@@ -90,9 +90,15 @@ export function Header() {
             >
               Tentang
             </a>
-            <Button className="w-full bg-[#70A118] hover:bg-[#548C1A]">
-              Konsultasi Gratis
-            </Button>
+            <a
+              href={`https://wa.me/${phone}?text=${encodeURIComponent(messageConsult)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="w-full bg-[#70A118] hover:bg-[#548C1A]">
+                Konsultasi Gratis
+              </Button>
+            </a>
           </div>
         )}
       </nav>

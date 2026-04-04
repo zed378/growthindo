@@ -4,9 +4,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
+import { MessageCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -36,6 +38,8 @@ const faqs = [
       "Kami tidak hanya memberikan rekomendasi, tapi ikut mendampingi implementasi. Fokus kami adalah perubahan nyata, bukan hanya slide presentasi yang bagus. Kami juga sangat transparan tentang posisi kami sebagai bisnis yang masih bertumbuh.",
   },
 ];
+
+import { phone, messageConsult, messageDiscuss } from "../../contants/whatsapp";
 
 export function FAQ() {
   const ref = useRef(null);
@@ -102,12 +106,25 @@ export function FAQ() {
             }
             transition={{ delay: 0.8 }}
           >
-            <p className="text-lg text-gray-700 mb-4">
-              Masih ada pertanyaan lain?
-            </p>
-            <p className="text-gray-600">
+            <p className="text-lg text-gray-700">Masih ada pertanyaan lain?</p>
+            <p className="text-gray-600 my-4">
               Hubungi kami langsung untuk diskusi lebih lanjut
             </p>
+
+            <a
+              href={`https://wa.me/${phone}?text=${encodeURIComponent(messageDiscuss)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="group border-[#70A118] text-[#70A118] hover:bg-[#70A118] hover:text-white text-lg px-6 py-3 h-auto w-full sm:w-auto cursor-pointer"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Diskusikan Kebutuhan Anda
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>

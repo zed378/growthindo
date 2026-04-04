@@ -1,6 +1,8 @@
 import { Mail, MessageCircle, Linkedin, Instagram } from "lucide-react";
 import logoSvg from "../../imports/simplify.svg";
 
+import { phone, messageConsult, messageDiscuss } from "../../contants/whatsapp";
+
 export function Footer() {
   const date = new Date();
   const year = date.getFullYear();
@@ -78,12 +80,12 @@ export function Footer() {
                 <div>
                   <p className="text-gray-400 text-xs mb-1">WhatsApp</p>
                   <a
-                    href="https://wa.me/6289676306869"
+                    href={`https://wa.me/${phone}?text=${encodeURIComponent(messageConsult)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#70A118] transition-colors"
                   >
-                    089676306869
+                    Whatsapp
                   </a>
                 </div>
               </li>
@@ -109,7 +111,9 @@ export function Footer() {
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/growthindonesiaconsulting/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#70A118] transition-colors"
               >
                 <Instagram size={18} />
