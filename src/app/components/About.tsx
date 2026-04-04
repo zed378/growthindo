@@ -19,7 +19,7 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-white">
+    <section ref={ref} className="py-16 md:py-24 bg-white" id="about">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto overflow-x-hidden">
           <motion.div

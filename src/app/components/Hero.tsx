@@ -3,9 +3,14 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 
+import { phone, messageConsult, messageDiscuss } from "../../contants/whatsapp";
+
 export function Hero() {
   return (
-    <section className="relative pt-24 pb-20 md:pt-32 md:pb-32 lg:pt-40 lg:pb-40 overflow-hidden">
+    <section
+      id="hero"
+      className="relative pt-24 pb-20 md:pt-32 md:pb-32 lg:pt-40 lg:pb-40 overflow-hidden"
+    >
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
@@ -60,23 +65,35 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                className="group bg-[#70A118] hover:bg-[#548C1A] text-lg px-8 py-6 h-auto w-full sm:w-auto"
+              <a
+                href={`https://wa.me/${phone}?text=${encodeURIComponent(messageConsult)}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Jadwalkan Konsultasi Gratis
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button
+                  size="lg"
+                  className="group bg-[#70A118] hover:bg-[#548C1A] text-lg px-8 py-6 h-auto w-full sm:w-auto cursor-pointer"
+                >
+                  Jadwalkan Konsultasi Gratis
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="group border-[#70A118] text-[#70A118] hover:bg-[#70A118] hover:text-white text-lg px-8 py-6 h-auto w-full sm:w-auto"
+              <a
+                href={`https://wa.me/${phone}?text=${encodeURIComponent(messageDiscuss)}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Diskusikan Kebutuhan Anda
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group border-[#70A118] text-[#70A118] hover:bg-[#70A118] hover:text-white text-lg px-8 py-6 h-auto w-full sm:w-auto cursor-pointer"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Diskusikan Kebutuhan Anda
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

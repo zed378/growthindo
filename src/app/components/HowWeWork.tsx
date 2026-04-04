@@ -39,7 +39,7 @@ export function HowWeWork() {
   return (
     <section id="how-we-work" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto overflow-x-hidden">
           {/* Section Header */}
           <motion.div
             className="text-center mb-12 md:mb-16"

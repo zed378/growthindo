@@ -3,15 +3,17 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import logoSvg from "../../imports/simplify.svg";
 
+import { phone, messageConsult, messageDiscuss } from "../../contants/whatsapp";
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full overflow-x-hidden bg-white/95 backdrop-blur-sm z-50 border-b shadow-sm">
       <nav className="container mx-auto px-4 py-3 md:py-4">
-        <div className="flex items-center justify-between w-full min-w-0">
+        <div className="flex items-center justify-between w-full min-w-0 cursor-pointer">
           {/* Logo */}
-          <div className="flex items-center gap-2 md:gap-3">
+          <a href="#hero" className="flex items-center gap-2 md:gap-3">
             <img
               src={logoSvg}
               alt="Growth Indonesia Consulting Logo"
@@ -20,7 +22,7 @@ export function Header() {
             <p className="text-base md:text-xl font-bold text-gray-900 w-auto">
               Growth Indonesia Consulting
             </p>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -42,9 +44,16 @@ export function Header() {
             >
               Tentang
             </a>
-            <Button className="bg-[#70A118] hover:bg-[#548C1A]">
-              Konsultasi Gratis
-            </Button>
+
+            <a
+              href={`https://wa.me/${phone}?text=${encodeURIComponent(messageConsult)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#70A118] hover:bg-[#548C1A] cursor-pointer">
+                Konsultasi Gratis
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

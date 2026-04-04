@@ -13,6 +13,7 @@ import { TargetMarket } from "./components/TargetMarket";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { AboutFounder } from "./components/AboutFounder";
 import { FAQ } from "./components/FAQ";
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
         <Differentiation />
         <Values />
         <TargetMarket />
+        <AboutFounder />
         <FAQ />
         <CTA />
       </main>
