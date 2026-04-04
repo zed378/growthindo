@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="6.66667in" height="6.66667in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 6666.67 6666.67"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil1 {fill:#548C1A}
+    .fil4 {fill:#70A118}
+    .fil2 {fill:#8CB217}
+    .fil3 {fill:#CB1B1C}
+    .fil5 {fill:#F38719}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_3075517882624">
+   <rect class="fil0" x="-0" y="0" width="6666.67" height="6666.67"/>
+   <g>
+    <path class="fil1" d="M919.17 6203.11c210.98,76.76 270.76,198.44 484.21,85.87 160.79,-84.8 294.33,-170.17 439.08,-263.13 79.51,-51.06 155.85,-90.7 224.54,-139.32l600.23 -440.98c56.22,-46.75 62.59,-46.99 110.85,-83.11l623.79 -585.77c510.41,-580.45 753.8,-805.59 1218.65,-1564.13 438.51,-715.56 1188.19,-2221.91 1122.99,-3045.86 -247.21,718.26 -911.58,1638.46 -1602.29,2034.83 -899.12,515.97 -2720.57,601.34 -2924.01,736.34 1281.67,128.37 2763.3,17.33 1229.04,1826.76l-312.81 365.02 -1161.65 990.26c-53,48.33 -15.58,-2.32 -52.61,83.23z"/>
+    <path class="fil2" d="M3654.48 1025.17c-801.12,161.09 -587.28,1321.4 228.1,1180.67 306.21,-52.85 533.91,-340.39 466.22,-716.2 -48.53,-269.42 -359.32,-531.83 -694.32,-464.46z"/>
+    <path class="fil3" d="M3987.12 6082.16c148.87,-25.02 713.96,-351.79 794.95,-427.34l107.29 -2526.51 -803.47 1059.84 -98.78 1894.01z"/>
+    <path class="fil4" d="M3073.57 6390.12c122.54,-12.06 653.44,-176.67 731.91,-231.43l96.07 -1758.69 -752.1 771.91 -75.88 1218.21z"/>
+    <path class="fil5" d="M2166.58 6492.19c135.41,32.13 573.61,-44.08 725.97,-61.93l71.36 -1107.95 -748.9 647.22c-34.48,29.8 -31.92,232.73 -48.43,522.66z"/>
+   </g>
+  </g>
+ </g>
+</svg>
