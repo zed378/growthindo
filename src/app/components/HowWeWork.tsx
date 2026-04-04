@@ -35,11 +35,12 @@ const steps = [
 export function HowWeWork() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <section id="how-we-work" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto overflow-x-hidden">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div
             className="text-center mb-12 md:mb-16"
@@ -85,8 +86,12 @@ export function HowWeWork() {
             {/* Right - Image */}
             <motion.div
               className="relative order-first lg:order-last lg:sticky lg:top-24"
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: isMobile ? 0 : 50 }}
+              animate={
+                isInView
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: isMobile ? 0 : 50 }
+              }
               transition={{ duration: 0.8 }}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
