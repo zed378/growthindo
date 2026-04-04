@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/growthindonesia/",
+  base: "/growthindo/",
   resolve: {
     alias: {
       // Alias @ to the src directory

@@ -21,6 +21,11 @@ const expertise = [
     title: "Performance Management",
     description: "Meningkatkan performa tim menjadi aset strategis bisnis",
   },
+  {
+    title: "Organizational Development",
+    description:
+      "Mendesain dan membangun  organisasi agar efektif, adaptif, dan berkelanjutan.",
+  },
 ];
 
 export function AboutFounder() {
